@@ -125,12 +125,13 @@ class EvilCircle extends Shape {
 const balls = []
 while (balls.length < 25) {
   const size = random(10, 20)
-  const ball = new Ball(random(0 + size, width - size), random(0 + size, height - size), random(-7, 7), random(-7, 7), randomRGB(), size)
+  const ball = new Ball(random(0 + size, width - size), random(0 + size, height - size), random(-15, 15), random(-15, 15), randomRGB(), size)
   balls.push(ball)
   p.textContent = `Счетчик мячей: ${balls.length}`
 }
 
 const evilBall = new EvilCircle(random(0 + 10, width - 10), random(0 + 10, height - 10))
+
 ;(function loop() {
   ctx.fillStyle = 'rgba(0, 0, 0, 0.2)'
   ctx.fillRect(0, 0, width, height)
